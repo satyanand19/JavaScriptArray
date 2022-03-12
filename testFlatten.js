@@ -8,6 +8,6 @@ const nestedArray4 = [[[[[[[true, false]], 1, 2]], "string"]], 0];
 
 testObject.printArray(testObject.flatten(nestedArray));
 testObject.printArray(testObject.flatten(nestedArray1));
-testObject.printArray(testObject.flatten(nestedArray2)); //return as empty array
+testObject.printArray(testObject.flatten(nestedArray2)); // return as empty array
 testObject.printArray(testObject.flatten(nestedArray3));
 testObject.printArray(testObject.flatten(nestedArray4));
