@@ -7,7 +7,7 @@ const items2 = [-1, 2, 3, -8];
 const items3 = [1.2, 3.4, 8, 0, 5, 7];
 
 eachObject.each(testObject.map(items, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items1, testObject.transformation), eachObject.cb); //return empty array
+eachObject.each(testObject.map(items1, testObject.transformation), eachObject.cb); // return empty array
 eachObject.each(testObject.map(items2, testObject.transformation), eachObject.cb);
 eachObject.each(testObject.map(items3, testObject.transformation), eachObject.cb);
 
