@@ -4,12 +4,9 @@ function flatten(elements) {
         let flattenArray = [];
         for (let counter = 0; counter < elements.length; counter++) {
             arr = [];
-            if (Array.isArray(elements[counter])) {
-                flattenArray = flattenArray.concat(findEachElement(elements[counter]));
-            }
-            else {
-                flattenArray = flattenArray.concat(elements[counter]);
-            }
+
+            flattenArray = Array.isArray(elements[counter]) ? flattenArray.concat(findEachElement(elements[counter])) :
+                flattenArray.concat(elements[counter]);
 
         }
         return flattenArray;

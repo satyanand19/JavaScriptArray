@@ -5,9 +5,13 @@ const nestedArray1 = [0, [1, 2, 3], [4, 5, [6, 7]]];
 const nestedArray2 = [];
 const nestedArray3 = ["1", "2", "3", ["ab", "cd", ["ef", "gh"]]];
 const nestedArray4 = [[[[[[[true, false]], 1, 2]], "string"]], 0];
+const nestedArray5 = null;
+const nestedArray6 = undefined;
 
 testObject.printArray(testObject.flatten(nestedArray));
 testObject.printArray(testObject.flatten(nestedArray1));
 testObject.printArray(testObject.flatten(nestedArray2)); // return as empty array
 testObject.printArray(testObject.flatten(nestedArray3));
 testObject.printArray(testObject.flatten(nestedArray4));
+testObject.printArray(testObject.flatten(nestedArray5)); // return as empty array
+testObject.printArray(testObject.flatten(nestedArray6)); // return as empty array

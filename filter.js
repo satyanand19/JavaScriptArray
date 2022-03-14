@@ -1,16 +1,14 @@
 function filter(elements, cb) {
-    if (Array.isArray(elements)) {
-        let PrimeArray = [];
-        for (let counter = 0; counter < elements.length; counter++) {
-            if (typeof elements[counter] === 'number' && cb(elements[counter])) {
-                PrimeArray.push(elements[counter]);
-            }
+
+    if (elements === null || elements === undefined) return []; //this is for null and undefined cases
+
+    let PrimeArray = [];
+    for (let counter = 0; counter < elements.length; counter++) {
+        if (typeof elements[counter] === 'number' && cb(elements[counter])) {
+            PrimeArray.push(elements[counter]);
         }
-        return PrimeArray;
     }
-    else {
-        return [];
-    }
+    return PrimeArray;
 }
 
 function isPrime(Item) {
@@ -22,6 +20,8 @@ function isPrime(Item) {
             return false;
     }
     return true;
+
+
 }
 
 function printprime(primeArray) {
@@ -34,6 +34,7 @@ function printprime(primeArray) {
             console.log(primeArray[counter]);
         }
     }
+
 }
 
 module.exports = {

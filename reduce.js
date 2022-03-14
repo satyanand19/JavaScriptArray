@@ -18,12 +18,9 @@ function sumofAllElement(startvalue, eachItem) {
 }
 
 function printValue(sumResult) {
-    if (sumResult === 0) {
-        console.log("Invalid Input");
-    }
-    else {
-        console.log("Sum of all the element of array : " + sumResult);
-    }
+
+    !sumResult ? console.log("Invalid Input") : console.log("Sum of all the element of array : " + sumResult);
+
 }
 
 module.exports = {
