@@ -1,6 +1,7 @@
 function filter(elements, cb) {
 
-    if (elements === null || elements === undefined) return []; //this is for null and undefined cases
+    if (!elements)  //this is for null and undefined cases
+        return [];
 
     let PrimeArray = [];
     for (let counter = 0; counter < elements.length; counter++) {
@@ -12,11 +13,11 @@ function filter(elements, cb) {
 }
 
 function isPrime(Item) {
-    if (Item == 1 || Item == 0) {
+    if (Item === 1 || Item === 0) {
         return false;
     }
     for (let counter = 2; counter * counter <= Item; counter++) {
-        if (Item % counter == 0)
+        if (Item % counter === 0)
             return false;
     }
     return true;
@@ -25,7 +26,7 @@ function isPrime(Item) {
 }
 
 function printprime(primeArray) {
-    if (primeArray.length == 0) {
+    if (!primeArray.length) {
         console.log("Empty Array");
     }
     else {

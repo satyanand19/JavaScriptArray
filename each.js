@@ -1,12 +1,13 @@
 function each(elements, cb) {
-    if (Array.isArray(elements)) {
-
+    if (!elements) {
+        
+        return [];
+    }
+    else {
         for (let counter = 0; counter < elements.length; counter++) {
             cb(elements[counter], counter);
         }
-    }
-    else {
-        return [];
+
     }
 }
 

@@ -1,22 +1,22 @@
 function find(elements, cb) {
-        if(elements === null || elements === undefined) return undefined;  // this is for null and undefined cases
+    if (!elements) return undefined;  // this is for null and undefined cases
 
-        for (let counter = 0; counter < elements.length; counter++) {
-            if (cb(elements[counter])) {
-                return elements[counter];
-            }
+    for (let counter = 0; counter < elements.length; counter++) {
+        if (cb(elements[counter])) {
+            return elements[counter];
         }
-        return undefined;
+    }
+    return undefined;
 }
 
 function isCheck(eachItem) {
 
-    return eachItem === 3 ? true : false ;
+    return eachItem === 3 ? true : false;
 }
 
 let printNumber = number => {
 
-    number == undefined ? console.log("not found") : console.log(number);
+    !number ? console.log("not found") : console.log(number);
 };
 
 module.exports = {

@@ -1,7 +1,7 @@
 
 function map(elements, cb) {
 
-    if (Array.isArray(elements)) {
+    if (elements) {
         let mappedArray = [];
         for (let counter = 0; counter < elements.length; counter++) {
             mappedArray.push(cb(elements[counter]));

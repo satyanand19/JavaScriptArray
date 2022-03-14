@@ -12,5 +12,5 @@ eachObject.each(testObject.map(items, testObject.transformation), eachObject.cb)
 eachObject.each(testObject.map(items1, testObject.transformation), eachObject.cb); // return empty array
 eachObject.each(testObject.map(items2, testObject.transformation), eachObject.cb);
 eachObject.each(testObject.map(items3, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items4, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items5, testObject.transformation), eachObject.cb);
+eachObject.each(testObject.map(items4, testObject.transformation), eachObject.cb); // return empty array
+eachObject.each(testObject.map(items5, testObject.transformation), eachObject.cb); // return empty array

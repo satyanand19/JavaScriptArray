@@ -1,6 +1,9 @@
 let arr = [];
 function flatten(elements) {
-    if (Array.isArray(elements)) {
+    if (!elements) {
+        return [];
+    }
+    else {
         let flattenArray = [];
         for (let counter = 0; counter < elements.length; counter++) {
             arr = [];
@@ -10,9 +13,7 @@ function flatten(elements) {
 
         }
         return flattenArray;
-    }
-    else {
-        return [];
+
     }
 }
 
@@ -23,9 +24,11 @@ function findEachElement(ArrayOrElement) {
             findEachElement(ArrayOrElement[i]);
         }
         return arr;
+
     }
     else {
         arr.push(ArrayOrElement);
+
     }
 
 }

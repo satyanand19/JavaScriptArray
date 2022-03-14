@@ -1,5 +1,5 @@
 function reduce(elements, cb, startingValue) {
-    if (Array.isArray(elements)) {
+    if (elements) {
 
         for (let counter = 0; counter < elements.length; counter++) {
             startingValue = cb(startingValue, elements[counter]);
