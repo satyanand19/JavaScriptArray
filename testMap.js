@@ -1,16 +1,16 @@
 let testObject = require('./map');
 let eachObject = require('./each');
 
-const items = [1, 2, 3, 4, 5, 5];
-const items1 = [];
-const items2 = [-1, 2, 3, -8];
-const items3 = [1.2, 3.4, 8, 0, 5, 7];
-const items4 = null;
-const items5 = undefined;
+const evenNumberElements = [2, 4, 6, 8, 10, 12];
+const emptyElements = [];
+const oddNumberElements = [1, 3, 5, 7, 9, 99];
+const primeElements = [2,3,5,7,11,13,17,19];
+const nullElements = null;
+const undefinedElements = undefined;
 
-eachObject.each(testObject.map(items, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items1, testObject.transformation), eachObject.cb); // return empty array
-eachObject.each(testObject.map(items2, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items3, testObject.transformation), eachObject.cb);
-eachObject.each(testObject.map(items4, testObject.transformation), eachObject.cb); // return empty array
-eachObject.each(testObject.map(items5, testObject.transformation), eachObject.cb); // return empty array
+eachObject.each(testObject.map(evenNumberElements, testObject.transformation), eachObject.displayElements);
+eachObject.each(testObject.map(emptyElements, testObject.transformation), eachObject.displayElements); // return empty array
+eachObject.each(testObject.map(oddNumberElements, testObject.transformation), eachObject.displayElements);
+eachObject.each(testObject.map(primeElements, testObject.transformation), eachObject.displayElements);
+eachObject.each(testObject.map(nullElements, testObject.transformation), eachObject.displayElements); // return empty array
+eachObject.each(testObject.map(undefinedElements, testObject.transformation), eachObject.displayElements); // return empty array

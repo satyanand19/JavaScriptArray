@@ -12,12 +12,12 @@ function reduce(elements, cb, startingValue) {
     }
 }
 
-function sumofAllElement(startvalue, eachItem) {
+function sumofAllElement(sum, eachItem) {
 
-    return startvalue + eachItem;
+    return sum + eachItem;
 }
 
-function printValue(sumResult) {
+function displayValue(sumResult) {
 
     !sumResult ? console.log("Invalid Input") : console.log("Sum of all the element of array : " + sumResult);
 
@@ -26,5 +26,5 @@ function printValue(sumResult) {
 module.exports = {
     reduce,
     sumofAllElement,
-    printValue
+    displayValue
 }

@@ -1,17 +1,17 @@
 let testObject = require('./flatten');
 
 const nestedArray = [1, 0, [2, 3], [[3, 3]], [[[4, 5]]]];
-const nestedArray1 = [0, [1, 2, 3], [4, 5, [6, 7]]];
-const nestedArray2 = [];
-const nestedArray3 = ["1", "2", "3", ["ab", "cd", ["ef", "gh"]]];
-const nestedArray4 = [[[[[[[true, false]], 1, 2]], "string"]], 0];
-const nestedArray5 = null;
-const nestedArray6 = undefined;
+const nestedPrimeArray = [2, [5, 2, 3], [7, 23, [11, 31]]];
+const nestedEmptyArray = [];
+const nestedStingArray = ["1", "2", "3", ["ab", "cd", ["ef", "gh"]]];
+const nestedZeroArray = [[[[[[[0, 0]], 0, 0]], 0]], 0];
+const nestedNullArray = [[[[null]]]];
+const nestedUndefinedArray = [[[undefined]]];
 
-testObject.printArray(testObject.flatten(nestedArray));
-testObject.printArray(testObject.flatten(nestedArray1));
-testObject.printArray(testObject.flatten(nestedArray2)); // return as empty array
-testObject.printArray(testObject.flatten(nestedArray3));
-testObject.printArray(testObject.flatten(nestedArray4));
-testObject.printArray(testObject.flatten(nestedArray5)); // return as empty array
-testObject.printArray(testObject.flatten(nestedArray6)); // return as empty array
+testObject.displayArray(testObject.flatten(nestedArray));
+testObject.displayArray(testObject.flatten(nestedPrimeArray));
+testObject.displayArray(testObject.flatten(nestedEmptyArray)); // return as empty array
+testObject.displayArray(testObject.flatten(nestedStingArray));
+testObject.displayArray(testObject.flatten(nestedZeroArray));
+testObject.displayArray(testObject.flatten(nestedNullArray)); 
+testObject.displayArray(testObject.flatten(nestedUndefinedArray)); 

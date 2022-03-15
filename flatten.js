@@ -1,4 +1,4 @@
-let arr = [];
+let finalFlatternArray = [];
 function flatten(elements) {
     if (!elements) {
         return [];
@@ -6,9 +6,9 @@ function flatten(elements) {
     else {
         let flattenArray = [];
         for (let counter = 0; counter < elements.length; counter++) {
-            arr = [];
+            finalFlatternArray = [];
 
-            flattenArray = Array.isArray(elements[counter]) ? flattenArray.concat(findEachElement(elements[counter])) :
+            flattenArray = Array.isArray(elements[counter]) ? flattenArray.concat(checkEachElement(elements[counter])) :
                 flattenArray.concat(elements[counter]);
 
         }
@@ -17,27 +17,27 @@ function flatten(elements) {
     }
 }
 
-function findEachElement(ArrayOrElement) {
+function checkEachElement(ArrayOrElement) {
 
     if (Array.isArray(ArrayOrElement)) {
         for (let i = 0; i < ArrayOrElement.length; i++) {
-            findEachElement(ArrayOrElement[i]);
+            checkEachElement(ArrayOrElement[i]);
         }
-        return arr;
+        return finalFlatternArray;
 
     }
     else {
-        arr.push(ArrayOrElement);
+        finalFlatternArray.push(ArrayOrElement);
 
     }
 
 }
-function printArray(array) {
+function displayArray(array) {
     console.log(array);
 }
 
 module.exports = {
     flatten,
-    findEachElement,
-    printArray
+    checkEachElement,
+    displayArray
 };
