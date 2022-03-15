@@ -8,6 +8,7 @@ const nestedZeroArray = [[[[[[[0, 0]], 0, 0]], 0]], 0];
 const nestedNullArray = [[[[null]]]];
 const nestedUndefinedArray = [[[undefined]]];
 
+
 testObject.displayArray(testObject.flatten(nestedArray));
 testObject.displayArray(testObject.flatten(nestedPrimeArray));
 testObject.displayArray(testObject.flatten(nestedEmptyArray)); // return as empty array

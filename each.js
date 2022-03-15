@@ -5,6 +5,7 @@ function each(elements, cb) {
     }
     else {
         for (let counter = 0; counter < elements.length; counter++) {
+            
             cb(elements[counter], counter);
         }
 

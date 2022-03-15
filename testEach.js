@@ -11,5 +11,5 @@ testObject.each(evenNumberItems, testObject.displayElements);
 testObject.each(emptyItems, testObject.displayElements);  //return empty array
 testObject.each(oddNumberItems, testObject.displayElements);
 testObject.each(colorItems, testObject.displayElements);
-testObject.each(nullItems, testObject.displayElements);
-testObject.each(undefinedItems, testObject.displayElements);
+testObject.each(nullItems, testObject.displayElements); //return empty array
+testObject.each(undefinedItems, testObject.displayElements); //return empty array
