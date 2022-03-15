@@ -1,6 +1,6 @@
 function each(elements, cb) {
     if (!elements) {
-        
+
         return [];
     }
     else {
@@ -11,12 +11,12 @@ function each(elements, cb) {
     }
 }
 
-function cb(eachitem, index) {
+function displayElements(eachitem, index) {
 
     console.log("items[" + index + "] = " + eachitem);
 }
 
 module.exports = {
     each,
-    cb
+    displayElements
 };
