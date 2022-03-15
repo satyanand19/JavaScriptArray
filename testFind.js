@@ -1,17 +1,15 @@
 let testObject = require('./find');
 
-const items = [1, 2, 3, 4, 5, 5];
-const items1 = [];
-const items2 = "abc";
-const items3 = [1, 2, 6, 4, 5, 5, 87, 3];
-const items4 = ["a", "b", "c"];
-const items5 = null;
-const items6 = undefined;
+const evenNumberElements = [2, 4, 6, 8, 10, 12];
+const emptyElements = [];
+const oddNumberElements = [1, 3, 5, 7, 9, 99];
+const primeElements = [2,3,5,7,11,13,17,19];
+const nullElements = null;
+const undefinedElements = undefined;
 
-testObject.printNumber(testObject.find(items, testObject.isCheck));
-testObject.printNumber(testObject.find(items1, testObject.isCheck));
-testObject.printNumber(testObject.find(items2, testObject.isCheck));
-testObject.printNumber(testObject.find(items3, testObject.isCheck));
-testObject.printNumber(testObject.find(items4, testObject.isCheck));
-testObject.printNumber(testObject.find(items5, testObject.isCheck));
-testObject.printNumber(testObject.find(items6, testObject.isCheck));
+testObject.displayNumber(testObject.find(evenNumberElements, testObject.checkElement));
+testObject.displayNumber(testObject.find(emptyElements, testObject.checkElement));
+testObject.displayNumber(testObject.find(oddNumberElements, testObject.checkElement));
+testObject.displayNumber(testObject.find(primeElements, testObject.checkElement));
+testObject.displayNumber(testObject.find(nullElements, testObject.checkElement));
+testObject.displayNumber(testObject.find(undefinedElements, testObject.checkElement));

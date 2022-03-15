@@ -9,18 +9,18 @@ function find(elements, cb) {
     return undefined;
 }
 
-function isCheck(eachItem) {
+function checkElement(element) {
 
-    return eachItem === 3 ? true : false;
+    return element === 3 ? true : false;
 }
 
-let printNumber = number => {
+let displayNumber = number => {
 
     !number ? console.log("not found") : console.log(number);
 };
 
 module.exports = {
     find,
-    isCheck,
-    printNumber
+    checkElement,
+    displayNumber
 };
