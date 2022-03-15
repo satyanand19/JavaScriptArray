@@ -4,7 +4,7 @@ function map(elements, cb) {
     if (elements) {
         let mappedArray = [];
         for (let counter = 0; counter < elements.length; counter++) {
-            mappedArray.push(cb(elements[counter]));
+            mappedArray.push(cb(elements[counter], counter, elements));
         }
         return mappedArray;
     }
@@ -13,7 +13,7 @@ function map(elements, cb) {
     }
 }
 
-function transformation(eachItem) {
+function transformation(eachItem, index, array) {
 
     return eachItem * eachItem;
 }

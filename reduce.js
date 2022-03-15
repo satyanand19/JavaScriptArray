@@ -1,8 +1,8 @@
 function reduce(elements, cb, startingValue) {
     if (elements) {
 
-        for (let counter = 0; counter < elements.length; counter++) {
-            startingValue = cb(startingValue, elements[counter]);
+        for (let counter = 1; counter < elements.length; counter++) {
+            startingValue = cb(startingValue, elements[counter],counter,elements);
 
         }
         return startingValue;
@@ -12,7 +12,7 @@ function reduce(elements, cb, startingValue) {
     }
 }
 
-function sumofAllElement(sum, eachItem) {
+function sumofAllElement(sum, eachItem,index,array) {
 
     return sum + eachItem;
 }

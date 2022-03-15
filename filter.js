@@ -5,14 +5,14 @@ function filter(elements, cb) {
 
     let PrimeArray = [];
     for (let counter = 0; counter < elements.length; counter++) {
-        if (typeof elements[counter] === 'number' && cb(elements[counter])) {
+        if (cb(elements[counter], counter, elements)) {
             PrimeArray.push(elements[counter]);
         }
     }
     return PrimeArray;
 }
 
-function checkPrime(Item) {
+function checkPrime(Item, index, array) {
     if (Item === 1 || Item === 0) {
         return false;
     }

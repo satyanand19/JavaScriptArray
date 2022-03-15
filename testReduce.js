@@ -7,9 +7,9 @@ const primeElements = [2,3,5,7,11,13,17,19];
 const nullElements = null;
 const undefinedElements = undefined;
 
-testObject.displayValue(testObject.reduce(evenNumberElements, testObject.sumofAllElement, 0));
-testObject.displayValue(testObject.reduce(emptyElements, testObject.sumofAllElement, 0)); // return zero
-testObject.displayValue(testObject.reduce(oddNumberElements, testObject.sumofAllElement, 0)); 
-testObject.displayValue(testObject.reduce(primeElements, testObject.sumofAllElement, 0)); 
-testObject.displayValue(testObject.reduce(nullElements, testObject.sumofAllElement, 0));  //return zero
-testObject.displayValue(testObject.reduce(undefinedElements, testObject.sumofAllElement, 0)); // return zero
+testObject.displayValue(testObject.reduce(evenNumberElements, testObject.sumofAllElement, evenNumberElements[0]));
+testObject.displayValue(testObject.reduce(emptyElements, testObject.sumofAllElement, emptyElements[0])); // return zero
+testObject.displayValue(testObject.reduce(oddNumberElements, testObject.sumofAllElement, oddNumberElements[0])); 
+testObject.displayValue(testObject.reduce(primeElements, testObject.sumofAllElement, primeElements[0])); 
+testObject.displayValue(testObject.reduce(nullElements, testObject.sumofAllElement, null));  //return zero
+testObject.displayValue(testObject.reduce(undefinedElements, testObject.sumofAllElement, undefined)); // return zero
