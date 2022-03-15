@@ -1,17 +1,15 @@
-let testOject = require('./filter');
+let testObject = require('./filter');
 
-const items = [1, 2, 3, 4, 5, 5];
-const items1 = [];
-const items2 = ["ab", "cd"];
-const items3 = [0, 1, 3, 13, 65, 73, 31, 97];
-const items4 = [3, 7, 11, true, "cat"];
-const items5 = undefined;
-const items6 = null;
+const evenNumberElements = [2, 4, 6, 8, 10, 12];
+const emptyElements = [];
+const oddNumberElements = [1, 3, 5, 7, 9, 99];
+const primeElements = [2,3,5,7,11,13,17,19];
+const nullElements = null;
+const undefinedElements = undefined;
 
-testOject.printprime(testOject.filter(items, testOject.isPrime));
-testOject.printprime(testOject.filter(items1, testOject.isPrime));  // return empty array
-testOject.printprime(testOject.filter(items2, testOject.isPrime));   // return empty array
-testOject.printprime(testOject.filter(items3, testOject.isPrime));
-testOject.printprime(testOject.filter(items4, testOject.isPrime));
-testOject.printprime(testOject.filter(items5, testOject.isPrime)); // return empty array
-testOject.printprime(testOject.filter(items6, testOject.isPrime));  // return empty array
+testObject.displayPrimeArray(testObject.filter(evenNumberElements,testObject.checkPrime));
+testObject.displayPrimeArray(testObject.filter(emptyElements,testObject.checkPrime));
+testObject.displayPrimeArray(testObject.filter(oddNumberElements,testObject.checkPrime));
+testObject.displayPrimeArray(testObject.filter(primeElements,testObject.checkPrime));
+testObject.displayPrimeArray(testObject.filter(nullElements,testObject.checkPrime));
+testObject.displayPrimeArray(testObject.filter(undefinedElements,testObject.checkPrime));

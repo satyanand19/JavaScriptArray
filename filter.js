@@ -12,7 +12,7 @@ function filter(elements, cb) {
     return PrimeArray;
 }
 
-function isPrime(Item) {
+function checkPrime(Item) {
     if (Item === 1 || Item === 0) {
         return false;
     }
@@ -25,7 +25,7 @@ function isPrime(Item) {
 
 }
 
-function printprime(primeArray) {
+function displayPrimeArray(primeArray) {
     if (!primeArray.length) {
         console.log("Empty Array");
     }
@@ -40,6 +40,6 @@ function printprime(primeArray) {
 
 module.exports = {
     filter,
-    isPrime,
-    printprime
+    checkPrime,
+    displayPrimeArray
 };
